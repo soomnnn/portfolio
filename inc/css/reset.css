@@ -1,0 +1,235 @@
+@charset "utf-8";
+@import url('font.css');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700');
+
+
+
+*:focus {outline:none;}
+body, input, textarea, select, button, table{margin:0; font-size:16px; font-family: 'Noto Sans KR', sans-serif; font-weight: 400; color:#111;}
+body, h1, h2, h3, h4, h5, dl, dt, dd, ul, li, ol, th, td, p, form, fieldset, legend, button {margin: 0; padding: 0;}
+
+/* 시스템 스타일 초기화 */
+img, fieldset{border:0 none;}
+dl, ul, ol, li {list-style: none outside none;}
+button{border:0 none; cursor:pointer; display: block;}
+table {table-layout: fixed; border-spacing: 0; border-collapse:collapse;}
+
+/* 폰트 스타일 초기화 */
+strong, .strong , b {font-weight: 600;}
+address, caption, cite, code, dfn, em, var {font-style: normal;}
+
+/* 숨김 */
+hr { clear:both; display: none; }
+.blind, legend, caption {display:none;}
+
+/* 링크 태그 초기화 */
+a {text-decoration:none; color:#111;}
+a:hover, a:active, a:focus {text-decoration:none;}
+table a:hover, table a:active {text-decoration:underline;}
+table a.nonehoverline { text-decoration:none; }
+
+/* input, select, textarea 스타일 기본 설정 - 사용자 커스텀 필요 */
+input, select, textarea {vertical-align:middle; font-size:1em;}
+input, textarea, select { border:1px solid #ccc; background:#fff; outline:0;}
+select {height:35px;}
+input.text {padding:0px 8px; height:33px; color:#222}
+input.file {border:1px solid #ddd; padding:2px 6px;}
+input.check {border:none; background:none;}
+input.radio	{border:0 none; background:none;}
+textarea.textarea {height:120px; padding:2px 0;}
+
+/* 라디오 버튼 */
+.comm_radio {position:absolute;left:-9999px}
+.comm_radio_label {font-size:13px; margin-right:10px;}
+.comm_radio_label .ico_radio {display:inline-block; width:16px; height:16px; margin-top:-2px; background:url('/images/common/icon/icon_radio.gif') no-repeat left top; overflow:hidden; font-size:0; line-height:0; vertical-align:middle}
+.radio_on .ico_radio {background-position:left bottom}
+
+/* 체크박스 */
+.comm_check {position:absolute;left:-9999px}
+.comm_check_label {font-size:13px; cursor:pointer;}
+.comm_check_label .ico_check {display:inline-block; width:19px; height:19px; margin-top:-1px; background:url('/images/common/icon/icon_check.gif') no-repeat left top; overflow:hidden; font-size:0; line-height:0; vertical-align:middle}
+.check_on {color:#555;}
+
+/* margin */
+.mgT0 {margin-top:0px !important;}
+.mgT3 {margin-top:3px !important;}
+.mgT5 {margin-top:5px !important;}
+.mgT6 {margin-top:6px !important;}
+.mgT8 {margin-top:8px !important;}
+.mgT10 {margin-top:10px !important;}
+.mgT13 {margin-top:13px !important;}
+.mgT15 {margin-top:15px !important;}
+.mgT20 {margin-top:20px !important;}
+.mgT25 {margin-top:25px !important;}
+.mgT30 {margin-top:30px !important;}
+.mgT35 {margin-top:35px !important;}
+.mgT40 {margin-top:40px !important;}
+.mgT50 {margin-top:50px !important;}
+.mgT60 {margin-top:60px !important;}
+.mgT60 {margin-top:60px !important;}
+.mgT70 {margin-top:70px !important;}
+.mgT75 {margin-top:75px !important;}
+
+.mgB0 {margin-bottom:0px !important;}
+.mgB5 {margin-bottom:5px !important;}
+.mgB10 {margin-bottom:10px !important;}
+.mgB20 {margin-bottom:20px !important;}
+.mgB30 {margin-bottom:30px !important;}
+.mgB35 {margin-bottom:35px !important;}
+.mgB40 {margin-bottom:40px !important;}
+.mgB50 {margin-bottom:50px !important;}
+
+.mgR10 {margin-right:10px !important;}
+.mgR12 {margin-right:12px !important;}
+.mgR14 {margin-right:14px !important;}
+.mgR20 {margin-right:20px !important;}
+.mgR23 {margin-right:23px !important;}
+.mgR28 {margin-right:28px !important;}
+.mgR30 {margin-right:30px !important;}
+.mgR70 {margin-right:70px !important;}
+
+.mgL0 {margin-left:0px !important;}
+.mgL5 {margin-left:5px !important;}
+.mgL10 {margin-left:10px !important;}
+.mgL12 {margin-left:12px !important;}
+.mgL15 {margin-left:15px !important;}
+.mgL17 {margin-left:17px !important;}
+.mgL20 {margin-left:20px !important;}
+.mgL25 {margin-left:25px !important;}
+.mgL30 {margin-left:30px !important;}
+.mgL40 {margin-left:40px !important;}
+
+/* padding */
+.pd3 {padding:3px !important;}
+.pd10 {padding:10px !important;}
+.pd17 {padding:17px !important;}
+
+.pdT0 {padding-top:0px !important;}
+.pdT4 {padding-top:4px !important;}
+.pdT5 {padding-top:5px !important;}
+.pdT7 {padding-top:7px !important;}
+.pdT10 {padding-top:10px !important;}
+.pdT15 {padding-top:15px !important;}
+.pdT20 {padding-top:20px !important;}
+.pdT30 {padding-top:30px !important;}
+.pdT50 {padding-top:50px !important;}
+
+.pdB0 {padding-bottom:0px !important;}
+.pdB5 {padding-bottom:5px !important;}
+.pdB10 {padding-bottom:10px !important;}
+.pdB20 {padding-bottom:20px !important;}
+.pdB30 {padding-bottom:30px !important;}
+.pdB40 {padding-bottom:40px !important;}
+.pdB50 {padding-bottom:50px !important;}
+
+.pdL0 {padding-left:0px !important;}
+.pdL8 {padding-left:8px !important;}
+.pdL12 {padding-left:12px !important;}
+.pdL20 {padding-left:20px !important;}
+.pdL50 {padding-left:50px !important;}
+
+.pdR0 {padding-right:0px !important;}
+.pdR5 {padding-right:5px !important;}
+.pdR10 {padding-right:10px !important;}
+.pdR20 {padding-right:20px !important;}
+
+/* width */
+.w10 {width:10%;}
+.w12 {width:12%;}
+.w15 {width:15%;}
+.w30 {width:30%;}
+.w60 {width:60%;}
+.w100 {width:100%;}
+
+/* 정렬 */
+.alignL {text-align:left !important;}
+.alignR {text-align:right !important;}
+.alignC {text-align:center !important;}
+.alignJ{text-align:justify !important;}
+.clear {clear:both !important;}
+.floatL {float:left !important;}
+.floatR {float:right !important;}
+img.imgT {vertical-align:top !important;}
+img.imgB {vertical-align:bottom !important;}
+img.imgC {vertical-align:middle !important;}
+.vaT {vertical-align:top !important;}
+.vaB {vertical-align:bottom !important;}
+
+/* 이미지 정렬 */
+li img {vertical-align:top;}
+td img {vertical-align:middle;}
+
+/* slick */
+.slick-slider {position: relative; display: block; box-sizing: border-box; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -webkit-touch-callout: none; -khtml-user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent;}
+.slick-slider *:focus, .slick-slider *:active {outline: none;}
+.slick-list {position: relative; display: block; overflow: hidden; margin: 0; padding: 0;}
+.slick-list:focus { outline: none;}
+.slick-list.dragging {cursor: pointer; cursor: hand;}
+.slick-slider .slick-track, .slick-slider .slick-list {-webkit-transform: translate3d(0, 0, 0); -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -o-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0);}
+.slick-track {position: relative; top: 0; left: 0; display: block; margin-left: auto; margin-right: auto;}
+.slick-track:before, .slick-track:after {display: table; content: '';}
+.slick-track:after {clear: both;}
+.slick-loading .slick-track {visibility: hidden;}
+.slick-slide {display: none; float: left; height: 100%; min-height: 1px;}
+[dir='rtl'] .slick-slide {float: right;}
+.slick-slide img {display: inline-block; width: 100%;}
+.slick-slide.slick-loading img {display: none;}
+.slick-slide.dragging img {pointer-events: none;}
+.slick-initialized .slick-slide {display: block; position: relative;}
+.slick-loading .slick-slide {visibility: hidden;}
+.slick-vertical .slick-slide {display: block; height: auto; border: 1px solid transparent;}
+.slick-arrow.slick-hidden {display: none;}
+.slick-prev,.slick-next {font-size: 0; line-height: 0; position: absolute; bottom: -52px; display: block; width: 60px; height: 15px; padding: 0; cursor: pointer; color: transparent; border: none; outline: none; background: transparent; -webkit-transform: translate(0, -50%); -ms-transform: translate(0, -50%); transform: translate(0, -50%); z-index: 1; opacity: 0.5; -webkit-transition: all 0.2s; -o-transition: all 0.2s; transition: all 0.2s;}
+.slick-prev {background: url('../images/pop_arrow_prev.png') no-repeat 0 0; background-size: 100%; left: 48%; margin-left: -14%;}
+.slick-next {background: url('../images/pop_arrow_next.png') no-repeat 0 0; background-size: 100%; right: 48%; margin-right: -14%;}
+.slick-prev:hover,.slick-next:hover {opacity: 1;}
+.slick-dotted.slick-slider {margin-bottom: 0px;}
+.slick-dots {position: absolute; bottom: -45px; display: block; width: 100%; padding: 0; margin: 0; list-style: none; text-align: center;
+}
+.slick-dots li {position: relative; display: inline-block; width: 20px; height: 20px; margin: 0 5px; padding: 0; cursor: pointer;}
+.slick-dots li button {font-family: 'Poppins', sans-serif; font-size: 14px; line-height: 0; color: #999; display: block; width: 20px; height: 20px; padding: 5px; cursor: pointer; border: 0; outline: none; background: transparent;}
+.slick-dots li.slick-active button {color: #222;}
+
+.en {font-family: 'Poppins', sans-serif !important; font-weight: 400; letter-spacing: 0;}
+.en-tit {font-family: 'Poppins', sans-serif !important; font-weight: 900; font-size: 75px; line-height: 80px;}
+
+@media (max-width: 1280px) {
+    .slick-prev {margin-left: -18%;}
+    .slick-next {margin-right: -18%;}
+}
+
+@media (max-width: 960px) {
+    .slick-prev {margin-left: -22%;}
+    .slick-next {margin-right: -22%;}
+}
+
+@media (max-width: 840px) {
+    .slick-prev {margin-left: -25%;}
+    .slick-next {margin-right: -25%;}
+}
+
+@media (max-width: 768px) {
+    .slick-dots {bottom: -30px;}
+    .slick-dots li {margin: 0 4px;}
+    .slick-prev, .slick-next {width: 45px; height: 10px; bottom: -31px;}
+    .slick-prev {margin-left: -20%;}
+    .slick-next {margin-right: -20%;}
+    .pop-cont .p-right table tr:last-child th, .pop-cont .p-right table tr:last-child  td {border-bottom: 0;}
+}
+
+@media (max-width: 640px) {
+    .slick-dots li button {font-size: 13px;}
+    .slick-prev {margin-left: -26%;}
+    .slick-next {margin-right: -26%;}
+}
+
+@media (max-width: 580px) {
+    .slick-dots li button {font-size: 13px;}
+    .slick-prev {margin-left: -30%;}
+    .slick-next {margin-right: -30%;}
+}
+@media (max-width: 480px) {
+    .slick-dots li button {font-size: 13px;}
+    .slick-prev {margin-left: -38%;}
+    .slick-next {margin-right: -38%;}
+}
