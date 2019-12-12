@@ -1,6 +1,9 @@
-## PORTFOLIO
+# SUMIN JEONG
 
-WEB PUBLISHER PORTFOLIO.
+## PUBLISHER PORTFOLIO
+퍼블리셔 정수민 포트폴리오입니다.
+회사 프로젝트 및 개인 프로젝트 작업물들을 포트폴리오에 반영하여 GITHUB에 오픈합니다.
+
 
 ### Markdown
 
@@ -25,11 +28,3 @@ Syntax highlighted code block
 ```
 
 For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/soomnnn/soomnnn/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
