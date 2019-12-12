@@ -16,7 +16,7 @@ body {overflow: auto; min-height: 100%;}
 #header #menu > ul > li {display: inline-block; vertical-align: top;}
 #header #menu > ul > li > a {font-size: 16px; margin: 0 20px; position: relative;}
 #header #menu > ul > li > a.on {font-weight: 500;}
-#header #menu > ul > li > a::before {content:""; position:absolute; left:-5px; right:100%; top:60%; height:6px; background:transparent; transition: all 0.4s; -webkit-transition: all 0.4s; -o-transition: all 0.4s;}
+#header #menu > ul > li > a::before {content:""; position:absolute; left:-5px; right:100%; top:60%; height:6px; background:transparent; transition: all 0.4s; -webkit-transition: all 0.4s; -o-transition: all 0.4s; z-index: -1;}
 #header #menu > ul > li > a.on::before,
 #header #menu > ul > li > a:hover::before {width: 100%; background: #ffa21d7a;}
 #header #menu li.m.on a {font-weight: 700;}
@@ -32,15 +32,16 @@ body {overflow: auto; min-height: 100%;}
 #contents .intro.off {height: 10px !important; min-height: 10px;}
 #contents .intro .wrap {min-height:900px;}
 #contents .intro .intro-slider {height: 100%;}
+#contents .intro .intro-slider .slide {height: 100%;}
 #contents .intro .bx-viewport {height: inherit !important;}
 #contents .intro .visu-left {width: 100%; height: 100%; position: absolute; top: 0; right: -100%;  transition:all 0.6s cubic-bezier(.34,.37,.82,.48); -moz-transition:all 0.6s cubic-bezier(.34,.37,.82,.48); -webkit-transition:all 0.6s cubic-bezier(.34,.37,.82,.48); -o-transition:all 0.6s cubic-bezier(.34,.37,.82,.48);}
-#contents .intro .visu-right {width: 53%; height: 100%; position: absolute; top: 0; right: 0; transition:all 0.6s cubic-bezier(.34,.37,.82,.48); -moz-transition:all 0.6s cubic-bezier(.34,.37,.82,.48); -webkit-transition:all 0.6s cubic-bezier(.34,.37,.82,.48); -o-transition:all 0.6s cubic-bezier(.34,.37,.82,.48);}
+#contents .intro .visu-right {width: 53%; height: 100%; position: absolute; top: 0; right: 0; transition:all 0.6s cubic-bezier(.34,.37,.82,.48); -moz-transition:all 0.6s cubic-bezier(.34,.37,.82,.48); -webkit-transition:all 0.6s cubic-bezier(.34,.37,.82,.48); -o-transition:all 0.6s cubic-bezier(.34,.37,.82,.48); padding-bottom: 90px; box-sizing: border-box;}
 
-#contents .intro .main-slide {position: relative;}
+#contents .intro .main-slide {height: 100% !important; position: relative;}
 #contents .intro .bx-wrap,
 #contents .intro .bx-wrapper,
 #contents .intro .bx-wrapper img {height: 100% !important;}
-#contents .intro .mid-box {width: 100%; height: 100%; display: table; table-layout: fixed; z-index: 2; position: relative;}
+#contents .intro .mid-box {width: 100%; height: 100%; display: table; table-layout: fixed; z-index: 2; position: relative; margin-left: -20px;}
 #contents .intro .txt-box {display: table-cell; vertical-align: middle; text-align: left;}
 #contents .intro .intro-slider > div.active .visu-left {animation: bg01 1.3s cubic-bezier(.34,.37,.82,.48); animation-fill-mode:forwards; animation-delay: 0.5s;}
 #contents .intro .btn-scroll {position: absolute; bottom: 5%; left: 50%; margin-left: -27px;}
@@ -62,37 +63,54 @@ body {overflow: auto; min-height: 100%;}
 
 #contents .intro .txt-box span {display: inline-block; font-weight: 700; font-size: 25px; padding-bottom: 45px; position: relative;}
 #contents .intro .txt-box span::before {width: 60%; height: 3px; background: #111; display: inline-block; content: ''; position: absolute; top: 45px; left: 0;}
-#contents .intro .obj-box {width: 800px; height: 540px; position: absolute; top: 50%; left: -3%; margin-top: -270px;; z-index: 1; opacity: 0;}
+#contents .intro .obj-box {width: 960px; height: 540px; position: absolute; top: 48%; left: -6%; margin: -270px 0 0; z-index: 1; opacity: 0;}
 #contents .intro .obj-box > span {display: inline-block;}
 #contents .intro .obj-box .line-top {width: 0; height: 5px; background: #f4f5f9; position: absolute; top: 0; left: 0;}
 #contents .intro .obj-box .line-right {width: 5px; height: 0; background: #f4f5f9; position: absolute; top: 0; right: 0;}
 #contents .intro .obj-box .line-bottom {width: 0; height: 5px; background: #f4f5f9; position: absolute; bottom: 0; right: 0;}
 #contents .intro .obj-box .line-left {width: 5px; height: 0; background: #f4f5f9; position: absolute; bottom: 0; left: 0;}
-
+#contents .intro .txt-ovh {overflow: hidden;}
+#contents .intro .txt-ovh p {color: #666; font-size: 14px; font-weight: 300; padding: 50px 0 0 180px;}
+#contents .intro .txt-all {transform: translate(0,110%); opacity: 0; transition: all 3s cubic-bezier(0,.72,.44,.99) 0.1s;}
+#contents .intro .txt-left {transform: translate(-100px,0);}
+#contents .intro .txt-ovh p br.m {display: none;}
+#contents .intro .active .txt-all {transform: translate(0,0); opacity: 1; transition: all 1.2s cubic-bezier(0,.72,.44,.99) 3s;}
 #contents .intro .active .obj-box {opacity: 1; -webkit-transition-delay: 1.4s; -o-transition-delay: 1.4s; transition-delay: 1.4s;}
 #contents .intro .active .obj-box .line-top {width: 100%; -webkit-transition: width 0.3s ease-out 1.5s; transition: width 0.3s ease-out 1.5s;}
 #contents .intro .active .obj-box .line-right {height: 100%; -webkit-transition: height 0.3s ease-out 1.9s; transition: height 0.3s ease-out 1.9s;}
 #contents .intro .active .obj-box .line-bottom {width: 100%; -webkit-transition: width 0.3s ease-out 2.3s; transition: width 0.3s ease-out 2.3s;}
 #contents .intro .active .obj-box .line-left {height: 100%; -webkit-transition: height 0.3s ease-out 2.7s; transition: height 0.3s ease-out 2.7s;}
 
-#contents .portfolio-wrap {width:100%; background: url('../images/bg_visual1.jpg') repeat center top; background-size: cover; vertical-align:middle; display:inline-block; position:relative; padding: 250px 0 100px; box-sizing: border-box;z-index:1;}
+#contents .portfolio-wrap {width:100%; background: url('../images/bg_visual1.jpg') repeat center top; background-size: cover; vertical-align:middle; display:inline-block; position:relative; padding: 0 0 100px; box-sizing: border-box;z-index:1;}
 #contents .portfolio-wrap .en-tit {font-size: 110px; color: #c8d0e0;  text-align: center;}
 #contents .portfolio-wrap .inner {background: #fff; padding: 60px 150px 45px; box-sizing: border-box; box-shadow: 0 50px 100px rgba(17, 20, 39, 0.1);}
 
 #contents .skill .list {font-size: 0; text-align: center; margin: 0 auto;}
-#contents .skill .list > li {width: 32%; text-align: left; display: inline-block; margin: 30px 1% 30px 0; padding-right: 20px; box-sizing: border-box;}
-#contents .skill .list > li:nth-child(3n) {margin-right: 0;}
+#contents .skill .list > li {width: 48%; height: 110px; text-align: left; display: inline-block; margin: 30px 2% 30px 0; overflow: hidden;;}
+#contents .skill .list > li:nth-child(2n) {margin-right: 0;}
 #contents .skill .list > li dl {position: relative;}
-#contents .skill .list > li dl::before {width: 0; height: 8px; background: #ffa21d7a; content: ''; display: inline-block; position: absolute; top: 72px; left: 21%; transition: all 0.5s ease-in 0.8s; -webkit-transition:all 0.5s ease-in 0.8s; -o-transition: all 0.5s ease-in 0.8s; opacity: 0;}
-#contents .skill .list > li dl dt {font-weight: 500; font-size: 42px; color: #666; letter-spacing: -1.2px; display: block; transition: all 0.3s ease 0.8s; -webkit-transition: all 0.3s ease 0.8s; -o-transition: all 0.3s ease 0.8s; position: relative; opacity: 0;}
-#contents .skill .list > li dl dt .f-word {font-size: 68px; font-weight: 400; display: inline-block; vertical-align: initial;}
+
+#contents .skill .list > li dl dt {width: 40%; line-height: 1; font-weight: 500; font-size: 27px; color: #666; letter-spacing: -1.2px; display: inline-block; vertical-align: middle; transition: all 0.3s ease 0.8s; -webkit-transition: all 0.3s ease 0.8s; -o-transition: all 0.3s ease 0.8s; position: relative; opacity: 0;}
+#contents .skill .list > li dl dt .f-word {font-size: 42px; font-weight: 400; display: inline-block; vertical-align: initial;}
 #contents .skill .list > li dl dt .word {display: inline-block;}
-#contents .skill .list > li dl dd {float: right; font-size: 16px; display: inline-block; vertical-align: text-top; margin-top: 5px; opacity: 0; position: relative; padding-right: 25px; margin-top: -18px;}
+#contents .skill .list > li dl dd {display: inline-block; width: 60%; line-height: 1.8; font-size: 15px; vertical-align: text-top; word-break: keep-all; margin-top: 5px; opacity: 0; position: relative; margin-top: -12px; transition: all 0.3s linear 1s; -webkit-transition: all 0.3s linear 1s; -o-transition: all 0.3s linear 1s;}
+#contents .skill .list > li:nth-child(4) dl dd {margin-top: -33px;}
+#contents .skill .list > li dl dt::before {background-size: cover !important; content: ''; display: inline-block; position: absolute; opacity: 0; transition: all 1s ease-in 1s; -webkit-transition:all 1s ease-in 1s; -o-transition: all 1s ease-in 1s;}
+#contents .skill .list > li:nth-child(1) dl dt::before {width: 46px; height: 50px; background: url('../images/icon_html.png') repeat center top;top: 22px; left: 60px;}
+#contents .skill .list > li:nth-child(2) dl dt::before {width: 44px; height: 50px; background: url('../images/icon_css.png') repeat center top; top: 22px; left: 63px;}
+#contents .skill .list > li:nth-child(3) dl dt::before {width: 50px; height: 50px; background: url('../images/icon_js.png') repeat center top; top: 22px; left: 78px;}
+#contents .skill .list > li:nth-child(4) dl dt::before {width: 50px; height: 50px; background: url('../images/icon_git.png') repeat center top; top: 15px; left: 65px;}
+#contents .skill .list > li:nth-child(5) dl dt::before {width: 50px; height: 50px; background: url('../images/icon_ps.png') repeat center top; top: 22px; left: 118px;}
+#contents .skill .list > li:nth-child(6) dl dt::before {width: 50px; height: 50px; background: url('../images/icon_ai.png') repeat center top; top: 22px; left: 114px;}
 #contents .skill .list > li dl dd > ul li {position: relative;}
-#contents .skill.on .list > li dl::before {width: 75%; opacity: 1;}
+#contents .skill .list > li dl dd > ul li::before {width: 13px;height: 10px;background:  url('../images/ico_check.png') repeat center top;content: '';display: inline-block;position: absolute;top: 8px;left: -18px;background-size: 100% 100%;}
+/* #contents .skill.on .list > li dl::before {width: 20%; opacity: 1;} */
 #contents .skill.on .list > li dl dt {opacity: 1;}
+#contents .skill.on .list > li dl dt::before {transition: all 0.7s ease-in 1s; -webkit-transition:all 0.7s ease-in 1s; -o-transition: all  0.7s ease-in 1s; opacity: 0.2;}
 #contents .skill.on .list > li dl dd {opacity: 1;}
 
+#contents .portfolio-wrap {padding-top: 150px;}
+#contents .portfolio-wrap > div {padding-top: 100px; box-sizing: border-box;}
 #contents .portfolio {margin-top: 100px;}
 #contents .portfolio .p-list > ul > li {width: 100%; border-top: #e4e4e4 solid 1px; display: inline-block; position: relative; padding: 70px 0; transition: all 0.3s; -webkit-transition: all 0.3s;}
 #contents .portfolio .p-list > ul > li:nth-child(1) {border-top: 0;}
@@ -101,6 +119,7 @@ body {overflow: auto; min-height: 100%;}
 .p-title::before {width: 45px; height: 5px; background: #666; content: ''; display: inline-block; position: absolute; top: 0; left: 0;}
 #contents .portfolio .p-detail {padding-top: 135px;}
 #contents .portfolio .p-detail a {font-size: 20px; position: relative;}
+#contents .portfolio .p-detail a:nth-child(2) {margin-left:  20px;}
 #contents .portfolio .p-detail a::before {width: 30%; height: 5px; background: #ffa21d7a; content: ''; display: inline-block; position: absolute; bottom: 8px; left: 0;}
 #contents .portfolio .p-detail a:hover::before {width:100%; transition: all 0.4s; -webkit-transition: all 0.4s; -o-transition: all 0.4s;}
 #contents .portfolio .p-detail li {line-height: 2;}
@@ -130,11 +149,6 @@ body {overflow: auto; min-height: 100%;}
 #contents .portfolio .p-thumbnail.live:hover .cap .en,
 #contents .portfolio .p-thumbnail.ver .cap a:hover .en {color: #fff; letter-spacing: 0; transform: scale(1); -webkit-transform: scale(1); -ms-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1);}
 
-#contents .intro .txt-ovh {overflow: hidden;}
-#contents .intro .txt-ovh p {color: #666; padding: 30px 0 0 180px;}
-#contents .intro .txt-all {transform: translate(0,110%); opacity: 0; transition: all 3s cubic-bezier(0,.72,.44,.99) 0.1s;}
-#contents .intro .txt-left {transform: translate(-100px,0);}
-#contents .intro .active .txt-all {transform: translate(0,0); opacity: 1; transition: all 1.2s cubic-bezier(0,.72,.44,.99) 3s;}
 
 /* popup */
 .popup {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(23, 27, 35, 0.9); z-index: 100; display: none;}
@@ -154,6 +168,8 @@ body {overflow: auto; min-height: 100%;}
 .pop-cont .p-right table th::before {width: 15%; height: 5px; background: #ffa21d7a; content: ''; display: inline-block; position: absolute; top: 30px ;right: 20px; z-index: -1;}
 .pop-cont .p-right table tr.ex th {vertical-align: top;}
 .pop-cont .p-right table td {font-size: 15px; font-weight: 300;}
+.pop-cont .p-right table td a {text-decoration: underline;}
+.pop-cont .p-right table td a:nth-child(2) {margin-left: 10px;}
 .pop-cont .p-right table td p {line-height: 1.8;}
 .pop-cont .p-right table td p span {font-size: 13px; padding-left: 10px; display: inline-block;}
 
@@ -167,10 +183,14 @@ body {overflow: auto; min-height: 100%;}
 .popup .slick-track {height: 100% important}
 .slider-wrap {width: 100%; position: relative;}
  /* .popup .slick-slide {width: 100% !important;} */
-
+@media (max-width: 1770px){
+	#contents .intro .visu-right {right: 2%;}
+	#contents .intro .obj-box {width: 100%;}
+}
 @media (max-width: 1600px){
 	#wrap {min-width: 100%;}
     #header .inner {max-width: 100%;}
+
 	#contents .portfolio-wrap {background-size: 100% 100%;}
 
 	.layer_inner {width: 80%;}
@@ -189,7 +209,19 @@ body {overflow: auto; min-height: 100%;}
 @media (max-width: 1280px) {
 	.p-title {font-size: 28px; padding-top: 15px;}
 
-	#contents .portfolio-wrap .inner {width: 1000px; padding: 50px 80px}
+	#contents .portfolio-wrap .inner {width: 1000px; padding: 50px 80px;}
+	#contents .skill .list > li {height: 17vh;}
+	#contents .skill .list > li dl dt {display: block; width: 100%; padding-bottom: 18px;}
+	#contents .skill .list > li dl dd {width: 100%; padding-left: 15%; box-sizing: border-box; margin-top: -10px;}
+	#contents .skill .list > li dl dd ::before {left: -12}
+	#contents .skill .list > li:nth-child(1) dl dt::before {top: 2px;}
+	#contents .skill .list > li:nth-child(2) dl dt::before {top: 2px;}
+	#contents .skill .list > li:nth-child(3) dl dt::before {top: 2px; left: 88px;}
+	#contents .skill .list > li:nth-child(4) dl dt::before {top: 2px; left: 156px;}
+	#contents .skill .list > li:nth-child(5) dl dt::before {top: 2px; left: 152px;}
+	#contents .skill .list > li:nth-child(6) dl dt::before {top: 2px; left: 148px;}
+	#contents .skill .list > li:nth-child(4) dl dt br {display: none;}
+	#contents .skill .list > li:nth-child(4) dl dd {margin-top: -10px;}
 	#contents .portfolio .p-thumbnail {height: 205px;}
 
 	.layer_inner {width: 90%;}
@@ -201,19 +233,43 @@ body {overflow: auto; min-height: 100%;}
 	.p-title {font-size: 24px; padding-top: 12px;}
 
 	#contents .portfolio-wrap {padding: 0 5%; box-sizing: border-box;}
-	#contents .portfolio-wrap .en-tit {font-size: 90px; margin-top: 110px;}
+	#contents .portfolio-wrap .en-tit {font-size: 90px;}
 	#contents .portfolio .p-list > ul > li {padding: 35px 0;}
 	#contents .portfolio .p-info {width: 52%;}
 	.p-title::before {width: 38px; height: 4px;}
 	#contents .portfolio .p-detail {padding-top: 25px;}
+	#contents .portfolio .p-detail a {font-size: 18px;}
 	#contents .portfolio .p-thumbnail {width: 48%; height: 160px;}
 }
 
 @media (max-width: 1024px) {
-
+	#contents .portfolio-wrap > div {padding-top: 80px;}
+	#contents .portfolio {margin-top: 55px;}
 }
 
 @media (max-width: 960px) {
+	.en-tit {font-size: 42px; line-height: 55px;}
+	#header {height: 85px;  line-height: 85px;}
+	#contents .intro .visu-right {width: 100%; top: 0; right: 0; padding: 0 6%;}
+	#contents .intro .mid-box {display: block; width: auto; height: auto; margin-left: 0; position: absolute; bottom: 49%;}
+	#contents .intro .txt-box span {font-size: 22px; padding-bottom: 28px;}
+	#contents .intro .txt-box span::before {width: 45%; top: 37px;}
+	#contents .intro .obj-box {width: 65%; height: 340px; left: 3%; top: auto; bottom: 45%;}
+	#contents .intro .txt-ovh p {font-size: 13px; padding: 30px 0 0;}
+	#contents .intro .txt-ovh p br.m {display: block;}
+	#contents .intro .btn-scroll {width: 35px;}
+	#contents .intro .btn-scroll::after {width: 2px; height: 7px; background-size: cover; margin: -7px 0 0 0px;}
+	#contents .intro .btn-scroll img {width: 100%;}
+	#contents .skill .list > li dl dt {font-size: 20px;}
+	#contents .skill .list > li dl dt .f-word {font-size: 32px;}
+	#contents .skill .list > li dl dd {font-size: 14px; padding-left: 7%;}
+	#contents .skill .list > li:nth-child(1) dl dt::before {width: 36px; height: 40px; left: 48px; top: 0;}
+	#contents .skill .list > li:nth-child(2) dl dt::before {width: 36px; height: 40px; left: 48px; top: 0;}
+	#contents .skill .list > li:nth-child(3) dl dt::before {width: 40px; height: 40px; left: 65px; top: 0}
+	#contents .skill .list > li:nth-child(4) dl dt::before {width: 40px; height: 40px; left: 106px; top: 0}
+	#contents .skill .list > li:nth-child(5) dl dt::before {width: 40px; height: 40px; left: 110px; top: 0}
+	#contents .skill .list > li:nth-child(6) dl dt::before {width: 40px; height: 40px; left: 108px; top: 0}
+	#contents .portfolio {margin-top: 35px;}
 	#contents .portfolio .p-thumbnail {width: 45%;}
 }
 
@@ -226,11 +282,14 @@ body {overflow: auto; min-height: 100%;}
 	.p-title {font-size: 22px;}
 
     #contents .intro .cont {min-height: auto;}
+
 	#contents .portfolio-wrap .inner {padding: 35px 60px;}
+	#contents .skill .list > li {margin: 18px 2% 18px 0;}
 	#contents .portfolio .p-list > ul > li {padding: 28px 0;}
 	#contents .portfolio .p-info {width: 100%; margin-top: 210px;}
 	.p-title::before {width: 35px;}
 	#contents .portfolio .p-detail {padding-top: 25px;}
+	#contents .portfolio .p-detail a {font-size: 16px;}
 	#contents .portfolio .p-thumbnail {width: 100%; height: 180px; position: absolute; top: 0; left: 0; box-shadow: 0 5px 40px rgba(20,20,40,0.3);}
 
 	.layer_inner {padding: 30px 20px 50px;}
@@ -247,25 +306,52 @@ body {overflow: auto; min-height: 100%;}
 }
 
 @media (max-width: 640px) {
-
+	#header {height: 60px;  line-height: 60px;}
+	#header #menu > ul > li > a {font-size: 14px; margin: 0 12px;}
+	#contents .intro .obj-box {width: 94%;}
+	#contents .portfolio-wrap {padding: 0 4%;}
 	#contents .portfolio-wrap .inner {padding: 25px 45px;}
 	#contents .portfolio-wrap .en-tit{font-size: 14vw;}
+	#contents .skill .list > li {width: 100%; height: auto; margin: 15px 0;}
+	#contents .skill .list > li dl dt {display: inline-block; width: 38%; text-align: center; padding: 0 15px 0 0; box-sizing: border-box;}
+	#contents .skill .list > li:nth-child(1) dl dt::before {width: 26px; height: 30px; left: 23%; top: 8px;}
+	#contents .skill .list > li:nth-child(2) dl dt::before {width: 26px; height: 30px; left: 23%; top: 8px;}
+	#contents .skill .list > li:nth-child(3) dl dt::before {width: 30px; height: 30px; left: 16%; top: 8px;}
+	#contents .skill .list > li:nth-child(4) dl dt::before {width: 30px; height: 30px; left: 6%; top: 8px;}
+	#contents .skill .list > li:nth-child(5) dl dt::before {width: 30px; height: 30px; left: 3%; top: 8px;}
+	#contents .skill .list > li:nth-child(6) dl dt::before {width: 30px; height: 30px; left: 1%; top: 8px;}
+	#contents .skill .list > li dl dd {width: 62%; padding-left: 0; margin-top: -10px;}
+	#contents .skill .list > li dl dd::before {width: 10px; height: 7px; top: 9px; left: -14px; background-size: 100% 100%;}
 	#contents .portfolio .p-info {margin-top: 190px;}
 	#contents .portfolio .p-thumbnail {height: 160px;}
-
-
 }
 
 @media (max-width: 520px) {
+	.en-tit {font-size: 35px; line-height: 40px;}
 	.p-title {font-size: 20px;}
-	#contents .portfolio-wrap .inner {padding: 8% 5%;}
 
+	#contents .intro .txt-box span {font-size: 18px;}
+	#contents .intro .txt-box span::before {bottom: 30px;}
+	#contents .intro .txt-ovh p {font-size: 12px;}
+	#contents .intro .obj-box {height: 275px;}
+
+	#contents .skill .list > li dl dt {display: block; width: 100%; font-size: 18px; text-align: left; padding: 0;}
+	#contents .skill .list > li:nth-child(1) dl dt::before {left: 10%; top: 2px;}
+	#contents .skill .list > li:nth-child(2) dl dt::before {left: 10%; top: 2px;}
+	#contents .skill .list > li:nth-child(3) dl dt::before {left: 14%; top: 2px;}
+	#contents .skill .list > li:nth-child(4) dl dt::before {left: 24%; top: 2px;}
+	#contents .skill .list > li:nth-child(5) dl dt::before {left: 25%; top: 2px;}
+	#contents .skill .list > li:nth-child(6) dl dt::before {left: 24%; top: 2px;}
+	#contents .skill .list > li dl dt .f-word {font-size: 26px;}
+	#contents .skill .list > li dl dd {width: 100%; font-size: 13px; padding: 0 12%; margin-top: 8px;}
+	#contents .skill .list > li:nth-child(4) dl dd {margin-top: 8px;}
+	#contents .portfolio-wrap .inner {padding: 8% 5%;}
 	#contents .portfolio {padding: 0;}
 	#contents .portfolio .p-info {margin-top: 150px;}
 	#contents .portfolio .p-thumbnail {height: 120px;}
 
 	.pop-cont .p-left img {width: 95%;}
-	.pop-cont .p-right table th {]font-size: 13px;}
+	.pop-cont .p-right table th {font-size: 13px;}
 	.pop-cont .p-right table td {font-size: 14px;}
 }
 

@@ -47,7 +47,7 @@ $(document).ready(function(){
 	$(".gnb li a").click( function() {
 		var target = $(this).attr("href");
 		$("body, html").animate({
-			scrollTop: $(target).offset().top
+			scrollTop: target.offset().top
 		}, 300);
 		return false;
 	});
