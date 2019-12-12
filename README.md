@@ -1,7 +1,9 @@
 # SUMIN JEONG
 
 ## PUBLISHER PORTFOLIO
+
 퍼블리셔 정수민 포트폴리오입니다.
+
 회사 프로젝트 및 개인 프로젝트 작업물들을 포트폴리오에 반영하여 GITHUB에 오픈합니다.
 
 
