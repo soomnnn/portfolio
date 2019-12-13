@@ -295,9 +295,9 @@ body {overflow: auto; min-height: 100%;}
 	.layer_inner {padding: 30px 20px 50px;}
 	.pop_close {width: 15px; height: 15px; background-size: cover; top: 30px; right: 20px;}
 	.popup .p-title {padding-top: 8px;}
-	.pop-cont {height: 480px; padding-top: 10px; overflow-y: scroll;}
+	.pop-cont {height: 430px; padding-top: 10px; overflow-y: scroll;}
 	.pop-cont .p-left {float: none; width: 100%; height: auto !important;}
-	.pop-cont .p-left img {box-shadow: 0px 5px 12px 0px rgba(20,20,40,0.2);}
+	.pop-cont .p-left img {box-shadow: 0px 5px 14px -3px rgba(20,20,40,0.2);}
 	.pop-cont .p-right {float: none; width: 100%; height: auto; padding: 0; overflow: hidden;}
 	.pop-cont .p-right table th::before {width: 24px; height: 3px; top: 29px;}
 	.pop-cont .p-left img {width: 85%; margin: 0 auto 20px;}
@@ -350,7 +350,7 @@ body {overflow: auto; min-height: 100%;}
 	#contents .portfolio .p-info {margin-top: 150px;}
 	#contents .portfolio .p-thumbnail {height: 120px;}
 
-	.pop-cont .p-left img {width: 95%;}
+	.pop-cont .p-left img {width: 95% !important; }
 	.pop-cont .p-right table th {font-size: 13px;}
 	.pop-cont .p-right table td {font-size: 14px;}
 }
