@@ -120,7 +120,7 @@ body {overflow: auto; min-height: 100%;}
 #contents .portfolio .p-detail {padding-top: 135px;}
 #contents .portfolio .p-detail a {font-size: 20px; position: relative;}
 #contents .portfolio .p-detail a:nth-child(2) {margin-left:  20px;}
-#contents .portfolio .p-detail a::before {width: 30%; height: 5px; background: #ffa21d7a; content: ''; display: inline-block; position: absolute; bottom: 8px; left: 0;}
+#contents .portfolio .p-detail a::before {width: 30%; height: 5px; background: #ffa21d7a; content: ''; display: inline-block; position: absolute; bottom: 5px; left: 0;}
 #contents .portfolio .p-detail a:hover::before {width:100%; transition: all 0.4s; -webkit-transition: all 0.4s; -o-transition: all 0.4s;}
 #contents .portfolio .p-detail li {line-height: 2;}
 #contents .portfolio .p-detail dt {width: 80px; display: inline-block; position: relative;}
@@ -132,8 +132,9 @@ body {overflow: auto; min-height: 100%;}
 #contents .portfolio li:nth-child(2) .p-thumbnail {background-image: url('../images/img_portfolio2.jpg');}
 #contents .portfolio li:nth-child(3) .p-thumbnail {background-image: url('../images/img_portfolio1.jpg');}
 #contents .portfolio li:nth-child(4) .p-thumbnail {background-image: url('../images/img_portfolio3.jpg');}
-#contents .portfolio li:nth-child(5) .p-thumbnail {background-image: url('../images/img_portfolio4.jpg');}
-#contents .portfolio li:nth-child(6) .p-thumbnail {background-image: url('../images/img_portfolio5.jpg');}
+#contents .portfolio li:nth-child(5) .p-thumbnail {background-image: url('../images/img_portfolio7.jpg');}
+#contents .portfolio li:nth-child(6) .p-thumbnail {background-image: url('../images/img_portfolio4.jpg');}
+#contents .portfolio li:nth-child(7) .p-thumbnail {background-image: url('../images/img_portfolio5.jpg');}
 
 #contents .portfolio .p-thumbnail a {width: 100%; height: 100%; display: block; }
 #contents .portfolio .p-thumbnail:hover {transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); box-shadow:0 40px 80px rgba(17, 20, 39, 0.5);}
@@ -172,17 +173,12 @@ body {overflow: auto; min-height: 100%;}
 .pop-cont .p-right table td a:nth-child(2) {margin-left: 10px;}
 .pop-cont .p-right table td p {line-height: 1.8;}
 .pop-cont .p-right table td p span {font-size: 13px; padding-left: 10px; display: inline-block;}
-
-/* .pop-layer {width: 100% !important; height: 100% !important;}
-
-.popup .bx-wrapper {height: 100%;}
-.popup .bx-viewport {height: inherit !important;}
-.popup .bx-wrapper .bx-pager {padding-top: 0; bottom: -30px;}
-.popup .pop-slider {width: 100% !important; height: 100% !important}*/
-
+.pop-layer5 .pop-cont .p-left {display: none;}
+.pop-layer5 .pop-cont .p-right {width: 100%;}
+.pop-cont .p-right table .lh th::before {top: 49px;}
 .popup .slick-track {height: 100% important}
 .slider-wrap {width: 100%; position: relative;}
- /* .popup .slick-slide {width: 100% !important;} */
+
 @media (max-width: 1770px){
 	#contents .intro .visu-right {right: 2%;}
 	#contents .intro .obj-box {width: 100%;}
@@ -288,12 +284,12 @@ body {overflow: auto; min-height: 100%;}
 	#contents .portfolio .p-list > ul > li {padding: 28px 0;}
 	#contents .portfolio .p-info {width: 100%; margin-top: 210px;}
 	.p-title::before {width: 35px;}
-	#contents .portfolio .p-detail {padding-top: 25px;}
+	#contents .portfolio .p-detail {padding-top: 10px;}
 	#contents .portfolio .p-detail a {font-size: 16px;}
 	#contents .portfolio .p-thumbnail {width: 100%; height: 180px; position: absolute; top: 0; left: 0; box-shadow: 0 5px 40px rgba(20,20,40,0.3);}
 
 	.layer_inner {padding: 30px 20px 50px;}
-	.pop_close {width: 15px; height: 15px; background-size: cover; top: 30px; right: 20px;}
+	.pop_close {width: 15px; height: 15px; background-size: cover; top: 20px; right: 20px;}
 	.popup .p-title {padding-top: 8px;}
 	.pop-cont {height: 430px; padding-top: 10px; overflow-y: scroll;}
 	.pop-cont .p-left {float: none; width: 100%; height: auto !important;}
@@ -354,6 +350,9 @@ body {overflow: auto; min-height: 100%;}
 	.pop-cont .p-left img {width: 95% !important; min-height: auto;}
 	.pop-cont .p-right table th {font-size: 13px;}
 	.pop-cont .p-right table td {font-size: 14px;}
+	.pop-layer5 .pop-cont .p-right table td a {display: block; margin-left: 0;}
+	.pop-layer5 .pop-cont .p-right table td br {display: none;}
+	.pop-layer5 .pop-cont .p-right table .lh th::before {top: 57px;}
 }
 
 @media (max-width: 380px) {

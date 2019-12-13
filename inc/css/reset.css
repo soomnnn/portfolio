@@ -230,12 +230,11 @@ td img {vertical-align:middle;}
 }
 @media (max-width: 480px) {
     .slick-dots li button {font-size: 13px;}
-    .slick-prev {margin-left: -42%;}
-    .slick-next {margin-right: -42%;}
+    .slick-dots li {margin: 0 3px}
+    .slick-prev {margin-left: -45%;}
+    .slick-next {margin-right: -45%;}
 }
 
 @media (max-width: 320px) {
     .slick-dots li {margin: 0 2px}
-    .slick-prev {margin-left: -45%;}
-    .slick-next {margin-right: -45%;}
 }
