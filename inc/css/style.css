@@ -135,7 +135,6 @@ body {overflow: auto; min-height: 100%;}
 #contents .portfolio li:nth-child(5) .p-thumbnail {background-image: url('../images/img_portfolio7.jpg');}
 #contents .portfolio li:nth-child(6) .p-thumbnail {background-image: url('../images/img_portfolio4.jpg');}
 #contents .portfolio li:nth-child(7) .p-thumbnail {background-image: url('../images/img_portfolio5.jpg');}
-
 #contents .portfolio .p-thumbnail a {width: 100%; height: 100%; display: block; }
 #contents .portfolio .p-thumbnail:hover {transform: scale(1.05); -webkit-transform: scale(1.05); -moz-transform: scale(1.05); -ms-transform: scale(1.05); -o-transform: scale(1.05); box-shadow:0 40px 80px rgba(17, 20, 39, 0.5);}
 #contents .portfolio .p-thumbnail a img {width: 100%;}
@@ -150,6 +149,7 @@ body {overflow: auto; min-height: 100%;}
 #contents .portfolio .p-thumbnail.live:hover .cap .en,
 #contents .portfolio .p-thumbnail.ver .cap a:hover .en {color: #fff; letter-spacing: 0; transform: scale(1); -webkit-transform: scale(1); -ms-transform: scale(1); -moz-transform: scale(1); -o-transform: scale(1);}
 
+#contents .portfolio .p-detail.pdt {padding-top: 85px;}
 
 /* popup */
 .popup {position: fixed; left: 0; top: 0; width: 100%; height: 100%; background: rgba(23, 27, 35, 0.9); z-index: 100; display: none;}
@@ -201,6 +201,7 @@ body {overflow: auto; min-height: 100%;}
 	#contents .portfolio .p-list > ul > li {padding: 45px 0;}
 	#contents .portfolio .p-thumbnail {height: 215px;}
 	#contents .portfolio .p-detail {padding-top: 50px;}
+	#contents .portfolio .p-detail.pdt {padding-top: 50px;}
 }
 
 @media (max-width: 1280px) {
@@ -237,6 +238,8 @@ body {overflow: auto; min-height: 100%;}
 	#contents .portfolio .p-detail {padding-top: 25px;}
 	#contents .portfolio .p-detail a {font-size: 18px;}
 	#contents .portfolio .p-thumbnail {width: 48%; height: 160px;}
+
+	#contents .portfolio .p-detail.pdt {padding-top: 22px;}
 }
 
 @media (max-width: 1024px) {
@@ -285,7 +288,8 @@ body {overflow: auto; min-height: 100%;}
 	#contents .portfolio .p-list > ul > li {padding: 28px 0;}
 	#contents .portfolio .p-info {width: 100%; margin-top: 210px;}
 	.p-title::before {width: 35px;}
-	#contents .portfolio .p-detail {padding-top: 10px;}
+	#contents .portfolio .p-detail,
+	#contents .portfolio .p-detail.pdt {padding-top: 10px;}
 	#contents .portfolio .p-detail a {font-size: 16px;}
 	#contents .portfolio .p-thumbnail {width: 100%; height: 180px; position: absolute; top: 0; left: 0; box-shadow: 0 5px 40px rgba(20,20,40,0.3);}
 
