@@ -173,9 +173,10 @@ body {overflow: auto; min-height: 100%;}
 .pop-cont .p-right table td a:nth-child(2) {margin-left: 10px;}
 .pop-cont .p-right table td p {line-height: 1.8;}
 .pop-cont .p-right table td p span {font-size: 13px; padding-left: 10px; display: inline-block;}
+.pop-cont .p-right table .lh th::before {top: 39px;}
 .pop-layer5 .pop-cont .p-left {display: none;}
 .pop-layer5 .pop-cont .p-right {width: 100%;}
-.pop-cont .p-right table .lh th::before {top: 49px;}
+.pop-layer5 .pop-cont .p-right table .lh th::before {top: 49px;}
 .popup .slick-track {height: 100% important}
 .slider-wrap {width: 100%; position: relative;}
 
