@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&family=Poppins:wght@700&display=swap');
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-Thin.eot');
+    src: url('../fonts/Pretendard/Pretendard-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pretendard/Pretendard-Thin.woff2') format('woff2'),
+        url('../fonts/Pretendard/Pretendard-Thin.woff') format('woff'),
+        url('../fonts/Pretendard/Pretendard-Thin.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-ExtraLight.eot');
+    src: url('../fonts/Pretendard/Pretendard-ExtraLight.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pretendard/Pretendard-ExtraLight.woff2') format('woff2'),
+        url('../fonts/Pretendard/Pretendard-ExtraLight.woff') format('woff'),
+        url('../fonts/Pretendard/Pretendard-ExtraLight.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-Light.eot');
+    src: url('../fonts/Pretendard/Pretendard-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pretendard/Pretendard-Light.woff2') format('woff2'),
+        url('../fonts/Pretendard/Pretendard-Light.woff') format('woff'),
+        url('../fonts/Pretendard/Pretendard-Light.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-Regular.eot');
+    src: url('../fonts/Pretendard/Pretendard-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pretendard/Pretendard-Regular.woff2') format('woff2'),
+        url('../fonts/Pretendard/Pretendard-Regular.woff') format('woff'),
+        url('../fonts/Pretendard/Pretendard-Regular.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-Medium.eot');
+    src: url('../fonts/Pretendard/Pretendard-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pretendard/Pretendard-Medium.woff2') format('woff2'),
+        url('../fonts/Pretendard/Pretendard-Medium.woff') format('woff'),
+        url('../fonts/Pretendard/Pretendard-Medium.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-SemiBold.eot');
+    src: url('../fonts/Pretendard/Pretendard-SemiBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pretendard/Pretendard-SemiBold.woff2') format('woff2'),
+        url('../fonts/Pretendard/Pretendard-SemiBold.woff') format('woff'),
+        url('../fonts/Pretendard/Pretendard-SemiBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-Bold.eot');
+    src: url('../fonts/Pretendard/Pretendard-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pretendard/Pretendard-Bold.woff2') format('woff2'),
+        url('../fonts/Pretendard/Pretendard-Bold.woff') format('woff'),
+        url('../fonts/Pretendard/Pretendard-Bold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-ExtraBold.eot');
+    src: url('../fonts/Pretendard/Pretendard-ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pretendard/Pretendard-ExtraBold.woff2') format('woff2'),
+        url('../fonts/Pretendard/Pretendard-ExtraBold.woff') format('woff'),
+        url('../fonts/Pretendard/Pretendard-ExtraBold.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-style: normal;
+    src: url('../fonts/Pretendard/Pretendard-Black.eot');
+    src: url('../fonts/Pretendard/Pretendard-Black.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Pretendard/Pretendard-Black.woff2') format('woff2'),
+        url('../fonts/Pretendard/Pretendard-Black.woff') format('woff'),
+        url('../fonts/Pretendard/Pretendard-Black.ttf') format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 100;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-Thin.ttf') format("truetype");
+    src: url('../fonts/Poppins/Poppins-Thin.ttf') format("truetype"),
+        url('../fonts/Poppins/Poppins-Thin.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-Light.ttf') format("truetype");
+    src: url('../fonts/Poppins/Poppins-Light.ttf') format("truetype"),
+        url('../fonts/Poppins/Poppins-Light.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format("truetype");
+    src: url('../fonts/Poppins/Poppins-Regular.ttf') format("truetype"),
+        url('../fonts/Poppins/Poppins-Regular.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 500;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-Medium.ttf') format("truetype");
+    src: url('../fonts/Poppins/Poppins-Medium.ttf') format("truetype"),
+        url('../fonts/Poppins/Poppins-Medium.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 600;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format("truetype");
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format("truetype"),
+        url('../fonts/Poppins/Poppins-SemiBold.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 700;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format("truetype");
+    src: url('../fonts/Poppins/Poppins-Bold.ttf') format("truetype"),
+        url('../fonts/Poppins/Poppins-Bold.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format("truetype");
+    src: url('../fonts/Poppins/Poppins-SemiBold.ttf') format("truetype"),
+        url('../fonts/Poppins/Poppins-SemiBold.otf') format('opentype');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-weight: 800;
+    font-style: normal;
+    src: url('../fonts/Poppins/Poppins-Black.ttf') format("truetype");
+    src: url('../fonts/Poppins/Poppins-Black.ttf') format("truetype"),
+        url('../fonts/Poppins/Poppins-Black.otf') format('opentype');
+    font-display: swap;
+}
+
+body,
+a,
+button, input, select, textarea{
+	font-family: 'Pretendard','돋움', Dotum, '굴림', Gulim, Verdana, Arial, sans-serif;
+	font-weight: normal; word-break: keep-all;
+}
+.en {font-family: 'Poppins', sans-serif;}
